@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String-Methods</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container bg-dark">
+        <div class="text-center text-light"><h1>String Methods</h1></div>
+        <div class="str-concat fs-4 text-light"><h1>1 concat() joins two or more strings</h1>
+            <p>ex:<br>
+            a="Beautiful" <br>
+            b="flowers"</p>
+            <p id="demo1" class="text-dark bg-warning w-25"></p>
+        </div>
+        <div class="str-concat fs-4 text-light"><h1>2 length() - length of a string</h1>
+            <p>ex:<br>
+            a="Image" <br>
+            <p id="demo2" class="text-dark bg-warning w-25"></p>
+        </div>
+        <div class="str-concat fs-4 text-light"><h1>3 Extracting String Parts</h1>
+            <p>(1)slice(start, end)</p>
+            <p>ex:<br>
+            a="Imagepic" <br>
+            <p id="demo3" class="text-dark bg-warning w-25"></p>
+            <p id="demo4" class="text-dark bg-warning w-25"></p>
+            <p>(2)substring(start, end)</p>
+            <p>ex:<br>
+            a="Imagepic" <br>
+            <p id="demo5" class="text-dark bg-warning w-25"></p>
+            <p id="demo6" class="text-dark bg-warning w-25"></p>
+            <p>(3)subst(start, length)</p>
+            <p>ex:<br>
+            a="Imagepic" <br>
+            <p id="demo7" class="text-dark bg-warning w-25"></p>
+        </div>
+        <div class="str-concat fs-4 text-light"><h1>4 String toUpperCase() and String toLowerCase()</h1>
+            <p>convert upper case and lower case</p>
+            <p>ex.
+                a="Image" <br>
+            </p>
+            <p id="demo8" class="text-dark bg-warning w-25"></p>
+            <p id="demo9" class="text-dark bg-warning w-25 "></p>
+        </div>
+        <div class="str-concat fs-4 text-light"><h1>5 String charAt() and String charCodeAt()</h1>
+            <p>charAt() method returns the character at a specified index (position) in a string</p>
+            <p>ex.
+                a="Image" <br>
+            </p>
+            <p id="demo10" class="text-dark bg-warning w-25 "></p>
+            <p>charCodeAt() method returns the unicode of the character at a specified index in a string</p>
+            <p>ex.
+                a="Image" <br>
+            </p>
+            <p id="demo11" class="text-dark bg-warning w-25 "></p>
+    </div>
+    <div class="str-concat fs-4 text-light"><h1>6 String replace() and String replaceAll()</h1>
+        <p>ex. 
+            It's My home
+        </p>
+        <button onclick="myFunction()" class="btn btn-outline-warning mb-3">Try it</button>
+    <p id="demo12" class="text-dark bg-warning w-25 "></p>
+    <p>ex. 
+        I love cats. i like cats
+    </p>
+    <p id="demo13" class="text-dark bg-warning w-25 "></p>
+    </div>
+    <div class="str-concat fs-4 text-light"><h1>7 String trim()</h1>
+        <p>Trim() method removes whitespace from both sides of a string</p>
+        <p>ex. 
+
+             welcome my home!           
+        </p>
+        <p id="demo14" class="text-dark bg-warning w-25 "></p>
+
+        <p>string trimstart() and string trimend()</p>
+        <p>trimstart-Remove the starting whitespace and trimend()-Remove the Ending whitespace</p>
+       
+    </div>
+    <div class="str-concat fs-4 text-light"><h1>8 String Padding</h1>
+        <p>padStart() and padEnd() to support padding at the beginning and at the end of a string.</p>
+        <button onclick="myFunction1()" class="btn btn-outline-warning">Try</button>
+        <p>padStart() ex:5</p>
+        <p id="demo15" class="text-dark bg-warning w-25 "></p>
+        <p>padEnd() ex:5</p>
+        <p id="demo16" class="text-dark bg-warning w-25 "></p>
+    </div>
+    <div class="str-concat fs-4 text-light "><h1>String split()</h1>
+        <p>A string can be converted to an array with the split() method</p>
+        <p>ex.
+            a=a,b,c,e,f 
+        </p>
+        <p id="demo17" class="text-dark bg-warning w-25 "></p>
+    </div>
+    <br>
+    </div>
+
+
+
+    <script>
+        let text1 = "Beautiful";
+        let text2 = "flowers";
+        let text3 = text1.concat(" ",text2);
+        document.getElementById("demo1").innerHTML = text3;
+        //length
+        let text4 = "Image";
+        let text5=text4.length;
+        document.getElementById("demo2").innerHTML=text5;
+        //Extracting String
+        let text6 = "Imagepic";
+        let text7=text6.slice(0,3);
+        document.getElementById("demo3").innerHTML=text7;
+        let text8=text6.slice(3);
+        document.getElementById("demo4").innerHTML=text8;
+        //
+        let text9=text6.substring(0,2);
+        document.getElementById("demo5").innerHTML=text9;
+        let text10=text6.substring(3);
+        document.getElementById("demo6").innerHTML=text10;
+        //
+        let text11=text6.substr(0,4);
+        document.getElementById("demo7").innerHTML=text11;
+        // 
+        let text12=text4.toUpperCase();
+        document.getElementById("demo8").innerHTML=text12;
+        let text13=text4.toLowerCase();
+        document.getElementById("demo9").innerHTML=text13;
+        //
+        let text14=text4.charAt(1);
+        document.getElementById("demo10").innerHTML=text14;
+        let text15=text4.charCodeAt(1);
+        document.getElementById("demo11").innerHTML=text15;
+        //
+        
+        //
+        function myFunction() {
+            let text = "It's My home";
+        let newText = text.replace("home", "House");
+        document.getElementById("demo12").innerHTML=newText;
+        let text16 = "I love cats. i like cats"
+text17 = text16.replaceAll("Cats","Dogs");
+        document.getElementById("demo13").innerHTML=text17;
+        }
+        //
+        let text18 = "  welcome my home!     ";
+        let text19 = text18.trim();
+        document.getElementById("demo14").innerHTML=text19;
+        //
+        function myFunction1() {
+            let text = "5";
+          document.getElementById("demo15").innerHTML = text.padStart(4,"0");
+          document.getElementById("demo16").innerHTML = text.padEnd(4,"0");
+        }
+        let text20 = "a,b,c,e,f ";
+       const myArray = text20.split(",");
+       document.getElementById("demo17").innerHTML = myArray[0];
+        </script>
+
+</body>
+</html>
